@@ -1,0 +1,342 @@
+* {
+    box-sizing: border-box; /*Правильное отображение элементов с учетом margin и pading*/
+    margin: 0; /*Сброс самого внешнего слоя окружаюшего padding и content до 0 чтобы в будущем задать вручную*/
+    padding: 0; /*Сброс среднего слоя до 0 чтобы в будущем задать вручную*/
+}
+
+.container {
+    position: relative;  /*Чтобы сработало абсолютное позиционирование*/  
+    width: 1140px; /*Горизонтальная длина блока*/  
+    margin: 0 auto;
+}
+
+.promo{
+    min-height: 800px; /*Высота блока вертикальная*/
+    background: url('../img/backgroud/Layer\ 2.png') center center/cover no-repeat ; /*Бэкгроунд блока*/
+    padding: 39px 0 39px 0;
+}
+
+.logo .logo_img{ /*Наследование*/
+    display: block; /*Вид элемента*/
+    margin: 0 auto; /*Применимо только для блочных элементов*/
+} 
+
+.logo .logo_text{ /*Наследование*/
+    color: white; 
+    font-family: "Roboto"; /*Шрифт*/
+    font-size: 15px; /*Размеп шрифта*/
+    font-weight: 500; /*Жирность шрифта*/
+    line-height: 24px; /*Межстрочный интервал*/
+    text-transform: uppercase; /*CAPSLOCK*/
+    text-align: center; /*Расположение текста по центру*/
+    margin-top: 14px; /*Отступ элемента сверху*/
+} 
+
+h1{
+    margin-top: 53px;
+}
+
+.title{
+    color: #f9bf3f;
+    font-family: "Roboto"; /*Шрифт*/
+    font-size: 41px; /*Размеп шрифта*/
+    font-weight: 600; /*Жирность шрифта*/
+    line-height: 24px; /*Межстрочный интервал*/
+    text-transform: uppercase; /*CAPSLOCK*/
+    text-align: center; /*Расположение текста по центру*/
+    padding-top: 18px;
+}
+
+.simple .title_big{
+    color: #ffffff; 
+    font-family: "Roboto Black"; /*Шрифт*/
+    font-size: 80px; /*Размеп шрифта*/
+    font-weight: 400; /*Жирность шрифта*/
+    text-transform: uppercase; /*CAPSLOCK*/
+    text-align: center; /*Расположение текста по центру*/
+}
+
+.promo .promo_text{
+    padding: 0 13px;
+    margin-top: 48px;
+    color:#ffffff;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 28px;
+    font-family: "Roboto Light";
+    text-align: center;
+}
+.promo .promo_text span{
+    color: #f9bf3b;
+    font-family: "Roboto Bold"; /*Шрифт*/
+    font-weight: 700; /*Размеп шрифта*/
+}
+
+.promo .promo_button, .gift_button{
+    /*Свойства кнопки*/
+    display: block;
+    width: 313px;
+    height: 72px;
+    box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.18);
+    border: 4px solid rgba(0, 0, 0, 0.23);
+    background: linear-gradient(to top, #2798b9 0%, #3ab6da 100%);
+    margin: 0 auto;
+    margin-top: 53px;
+    border-radius: 15px;
+
+    /*Свойства текста кнопки*/
+    color: white;
+    font-family: "Roboto";
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+    cursor: pointer; 
+}
+
+.more{
+    margin-top: 73px;
+}
+
+.more .more_text{
+    font-family: "Roboto Thin";
+    color:#ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+ .more .more_img{
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.inside{
+    min-height: 604px;                     /*Минимальная высота блока, которая динамически изменится в случае чего ОЧЕНЬ ПОЛЕЗНО!*/
+    background-color: #efefef;
+    padding: 85px 0 75px 0; 
+}
+
+.inside .inside_header, .finish .finish_header{        /*Перечисление важных селекторов, на которые распрстраняться стили*/
+    color: #252525;
+    font-family: "Roboto";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 12px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.finish .finish_header{
+    color:#ffffff;
+}
+
+.inside .inside_divider, .finish .finish_divider{
+    width: 217px;
+    height: 4px;
+    background-color: #f9bf3b;
+    margin: 0 auto;                   /*Отображение по центру*/
+    margin-top: 18px;
+}
+
+.inside .inside_subheader{
+    margin-top: 17px;
+    color: #4a4a4a;
+    font-family: "Roboto";
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+}
+
+.inside .inside_wrapper {
+    display: flex;                          /*Расположение flex, подробно на сайте www.html5.by/blog/flexbox*/
+    justify-content: space-between;
+    flex-wrap: wrap;                    
+    margin-top: 45px;
+ }
+
+.inside .inside_wrapper .inside_item {                    
+    width: 339px;
+    text-align: center;
+ }
+
+ .inside .inside_wrapper .inside_item .inside_img {
+    width: 100%;                                         /*Картинкки имеют 100% размер от родителя*/
+ }
+
+ .inside .inside_wrapper .inside_item .inside_description {
+    margin-top: 33px;
+    color: #4a4a4a;
+    font-family: "Roboto";
+    font-size: 15px;
+    font-size: 300;     
+    line-height: 21px;                                  
+ }
+
+ .optimization{
+    min-height: 550px;
+    padding: 102px 0 7px 0;
+ }
+
+ .optimization .optimization_header{
+    margin-left: 391px;
+    color:#299cbd;
+    font-family: "Roboto Black";
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+ }
+
+ .optimization .optimization_text{
+    margin-top: 25px;
+    margin-left: 391px;
+    color: #4a4a4a;;
+    font-family: "Roboto Light";
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 22px;
+ }
+
+ .optimization .optimization_text span{
+    font-family: "Roboto Bold";
+    font-weight: 700;
+ } 
+
+ .optimization .optimization_img {
+    position: absolute;
+    top: -54px;
+    left: -240px;
+    z-index: -1;
+ }  
+
+
+ .finish{
+    min-height: 447px;
+    padding: 86px 0 79px 0;
+    background: url('/img/backgroud/back2.png') center center/cover no-repeat;
+ }
+
+ .finish .finish_wrapper {
+    margin-top: 41px;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .finish .finish_wrapper .finish_item {
+    width: 204px;
+ }
+
+ .finish .finish_wrapper .finish_round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 115px;
+    height: 115px;
+    background-color: #b4e2ff; 
+    border-radius: 100%;
+ }
+
+ .finish .finish_wrapper .finish_description {
+    margin-top: 25px;
+    text-align: center;
+    color: #efefef;
+    font-family: "Roboto";
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+ }
+
+.gift {
+    min-height: 604px;                     /*Минимальная высота блока, которая динамически изменится в случае чего ОЧЕНЬ ПОЛЕЗНО!*/
+    background-color: #efefef;
+    padding: 85px 0 75px 0; 
+} 
+
+.gift .giftbow .img_giftbow{
+    display: block;
+    margin: 0 auto;
+}
+
+.gift .img_giftbox {
+    display: block;
+    margin: 0 auto;
+}
+
+.gift .gift_text{
+    padding: 0 13px;
+    margin-top: 35px;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 35px;
+    font-family: "Roboto Light";
+    text-align: center;
+}
+
+.date{
+    min-height: 550px;
+    padding: 72px 0 27px 0;
+}
+
+.date .computer{
+    margin: 0 auto;
+    display: block;
+    width: 340px;
+    height: 200px;
+}
+
+.date .computer .img_screen{
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 45px;
+}
+
+.first{
+    font-family: "Roboto"; /*Шрифт*/
+    font-size: 26px; /*Размеп шрифта*/
+    font-weight: 400; /*Жирность шрифта*/
+    text-transform: uppercase; /*CAPSLOCK*/
+    text-align: center; /*Расположение текста по центру*/
+}
+
+.date_time{
+    margin-top: 24px;
+    color: #009ac5;
+    font-family: "Roboto"; /*Шрифт*/
+    font-size: 33px; /*Размеп шрифта*/
+    font-weight: 500; /*Жирность шрифта*/
+    line-height: 24px; /*Межстрочный интервал*/
+    text-transform: uppercase; /*CAPSLOCK*/
+    text-align: center; /*Расположение текста по центру*/
+}
+
+.fast{
+    margin-top: 24px;
+    font-family: "Roboto"; /*Шрифт*/
+    font-size: 24px; /*Размеп шрифта*/
+    font-weight: 300; /*Жирность шрифта*/
+    text-align: center; /*Расположение текста по центру*/
+}
+
+.futor{
+    background-color: black;
+    height: 150px;
+}
+
+.futor .support{
+    color:#858585;
+}
+
+.futor .confidentional{
+    color:#858585;
+}
+
+.futor .futor_text{
+    padding-top: 45px;
+    color:#858585;
+    text-align: center;
+    font-size: 18px;
+}
